@@ -15,12 +15,15 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f2;
+            background: #f4f4f1;
             color: #171717;
             min-height: 100vh;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             padding: 70px 8% 55px;
             background: #ffffff;
@@ -37,8 +40,8 @@
         }
 
         h1 {
-            font-size: clamp(44px, 7vw, 88px);
-            line-height: 0.92;
+            font-size: clamp(45px, 7vw, 90px);
+            line-height: 0.9;
             font-weight: 800;
             letter-spacing: -4px;
         }
@@ -51,15 +54,19 @@
             line-height: 1.7;
         }
 
-        /* MAIN */
+
+        /* =========================
+           MAIN
+        ========================= */
+
         main {
             padding: 60px 8% 100px;
         }
 
-        /* SAMPLE WEBSITE */
-        .sample-section {
-            margin-bottom: 70px;
-        }
+
+        /* =========================
+           SECTION LABEL
+        ========================= */
 
         .section-label {
             font-size: 12px;
@@ -70,21 +77,51 @@
             font-weight: 600;
         }
 
+
+        /* =========================
+           INSTRUCTOR SAMPLE
+        ========================= */
+
+        .sample-section {
+            margin-bottom: 75px;
+        }
+
         .sample-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-            padding: 35px;
+            display: block;
+            text-decoration: none;
             background: #171717;
             color: #ffffff;
-            text-decoration: none;
-            transition: 0.25s ease;
+            overflow: hidden;
+            transition: 0.3s ease;
+            border: 1px solid #171717;
         }
 
         .sample-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .sample-preview {
+            width: 100%;
+            height: 420px;
+            background: #e9e9e5;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .sample-preview iframe {
+            width: 100%;
+            height: 1100px;
+            border: none;
+
+            transform: scale(0.65);
+            transform-origin: top left;
+
+            width: 153.85%;
+        }
+
+        .sample-info {
+            padding: 28px 32px 32px;
         }
 
         .sample-info h2 {
@@ -93,17 +130,29 @@
         }
 
         .sample-info p {
-            color: #bdbdbd;
+            color: #aaa;
             line-height: 1.6;
-            max-width: 600px;
+            max-width: 650px;
         }
 
-        .sample-arrow {
-            font-size: 30px;
-            white-space: nowrap;
+        .sample-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #ffffff;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        /* STUDENTS */
+
+        /* =========================
+           STUDENT SECTION
+        ========================= */
+
+        .student-section {
+            margin-top: 20px;
+        }
+
         .section-title {
             display: flex;
             justify-content: space-between;
@@ -121,74 +170,114 @@
             letter-spacing: 2px;
         }
 
-        /* GRID */
+
+        /* =========================
+           STUDENT GRID
+        ========================= */
+
         .student-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
         }
 
+
+        /* =========================
+           STUDENT CARD
+        ========================= */
+
         .student-card {
-            text-decoration: none;
-            color: #171717;
             background: #ffffff;
             border: 1px solid #deded8;
-            padding: 25px;
-            min-height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: 0.25s ease;
+            text-decoration: none;
+            color: #171717;
+            overflow: hidden;
+            transition: 0.3s ease;
+            display: block;
         }
 
         .student-card:hover {
-            background: #171717;
-            color: #ffffff;
-            transform: translateY(-5px);
+            transform: translateY(-6px);
             border-color: #171717;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.10);
+        }
+
+
+        /* =========================
+           LIVE PREVIEW
+        ========================= */
+
+        .preview {
+            width: 100%;
+            height: 190px;
+            overflow: hidden;
+            background: #e8e8e4;
+            position: relative;
+        }
+
+        .preview iframe {
+            width: 100%;
+            height: 760px;
+            border: none;
+
+            transform: scale(0.32);
+            transform-origin: top left;
+
+            width: 312.5%;
+        }
+
+
+        /* =========================
+           CARD INFORMATION
+        ========================= */
+
+        .card-info {
+            padding: 20px;
         }
 
         .number {
             font-size: 12px;
-            color: #999;
             letter-spacing: 2px;
-        }
-
-        .student-card:hover .number {
-            color: #aaa;
+            color: #999;
         }
 
         .name {
+            margin-top: 8px;
             font-size: 20px;
             font-weight: 700;
         }
 
         .view {
+            margin-top: 12px;
             font-size: 11px;
-            text-transform: uppercase;
             letter-spacing: 2px;
-            margin-top: 14px;
+            text-transform: uppercase;
             color: #888;
         }
 
-        .student-card:hover .view {
-            color: #bbb;
-        }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
+            background: #ffffff;
             border-top: 1px solid #deded8;
             padding: 30px 8%;
             color: #888;
             font-size: 13px;
+
             display: flex;
             justify-content: space-between;
             gap: 20px;
             flex-wrap: wrap;
-            background: #ffffff;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 600px) {
 
             header {
@@ -199,38 +288,69 @@
                 letter-spacing: -2px;
             }
 
-            .sample-card {
-                padding: 25px;
-                flex-direction: column;
-                align-items: flex-start;
+            main {
+                padding-top: 45px;
             }
 
-            .sample-info h2 {
-                font-size: 24px;
+            .sample-preview {
+                height: 260px;
+            }
+
+            .sample-preview iframe {
+                transform: scale(0.42);
+                width: 238%;
             }
 
             .student-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
             }
 
-            .student-card {
-                min-height: 130px;
-                padding: 18px;
+            .preview {
+                height: 130px;
+            }
+
+            .preview iframe {
+                transform: scale(0.25);
+                width: 400%;
+            }
+
+            .card-info {
+                padding: 15px;
             }
 
             .name {
-                font-size: 17px;
+                font-size: 16px;
+            }
+
+            .view {
+                font-size: 9px;
+            }
+
+            .sample-info {
+                padding: 22px;
+            }
+
+            .sample-info h2 {
+                font-size: 23px;
             }
         }
     </style>
 </head>
 
+
 <body>
 
-    <!-- HEADER -->
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
     <header>
 
-        <div class="course">M3/14</div>
+        <div class="course">
+            M3/14
+        </div>
 
         <h1>
             Website<br>
@@ -247,17 +367,43 @@
     </header>
 
 
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
     <main>
 
-        <!-- SAMPLE WEBSITE -->
+
+        <!-- =====================================
+             INSTRUCTOR SAMPLE
+        ====================================== -->
+
         <section class="sample-section">
 
             <div class="section-label">
                 Instructor Sample
             </div>
 
-            <a class="sample-card"
-               href="Personal%20Portfolio%20Sample/">
+
+            <a
+                class="sample-card"
+                href="Personal%20Portfolio%20Sample/"
+            >
+
+                <!-- LIVE SAMPLE PREVIEW -->
+
+                <div class="sample-preview">
+
+                    <iframe
+                        src="Personal%20Portfolio%20Sample/"
+                        title="Personal Portfolio Sample"
+                    ></iframe>
+
+                </div>
+
+
+                <!-- SAMPLE INFORMATION -->
 
                 <div class="sample-info">
 
@@ -266,14 +412,15 @@
                     </h2>
 
                     <p>
-                        Explore the sample website created as a
-                        reference for the M3/14 Website Portfolio Project.
+                        Explore the instructor's sample website
+                        created as a reference for the
+                        M3/14 Website Portfolio Project.
                     </p>
 
-                </div>
+                    <div class="sample-link">
+                        Open Full Website →
+                    </div>
 
-                <div class="sample-arrow">
-                    View Website →
                 </div>
 
             </a>
@@ -281,8 +428,13 @@
         </section>
 
 
-        <!-- STUDENT PORTFOLIOS -->
-        <section>
+
+        <!-- =====================================
+             STUDENT PORTFOLIOS
+        ====================================== -->
+
+        <section class="student-section">
+
 
             <div class="section-title">
 
@@ -297,306 +449,961 @@
             </div>
 
 
+
             <div class="student-grid">
 
-                <a class="student-card" href="01_Nickname_Portfolio/">
-                    <span class="number">01</span>
-                    <div>
-                        <div class="name">Nickname</div>
-                        <div class="view">View Portfolio →</div>
+
+                <!-- =============================
+                     STUDENT 01
+                ============================== -->
+
+                <a
+                    class="student-card"
+                    href="01_Nickname_Portfolio/"
+                >
+
+                    <div class="preview">
+
+                        <iframe
+                            src="01_Nickname_Portfolio/"
+                            title="Student 01 Portfolio"
+                        ></iframe>
+
                     </div>
+
+                    <div class="card-info">
+
+                        <div class="number">
+                            01
+                        </div>
+
+                        <div class="name">
+                            Nickname
+                        </div>
+
+                        <div class="view">
+                            View Portfolio →
+                        </div>
+
+                    </div>
+
                 </a>
 
-                <a class="student-card" href="02_Nickname_Portfolio/">
-                    <span class="number">02</span>
-                    <div>
-                        <div class="name">Nickname</div>
-                        <div class="view">View Portfolio →</div>
+
+
+                <!-- =============================
+                     STUDENT 02
+                ============================== -->
+
+                <a
+                    class="student-card"
+                    href="02_Nickname_Portfolio/"
+                >
+
+                    <div class="preview">
+
+                        <iframe
+                            src="02_Nickname_Portfolio/"
+                            title="Student 02 Portfolio"
+                        ></iframe>
+
                     </div>
+
+                    <div class="card-info">
+
+                        <div class="number">
+                            02
+                        </div>
+
+                        <div class="name">
+                            Nickname
+                        </div>
+
+                        <div class="view">
+                            View Portfolio →
+                        </div>
+
+                    </div>
+
                 </a>
 
-                <a class="student-card" href="03_Nickname_Portfolio/">
-                    <span class="number">03</span>
-                    <div>
-                        <div class="name">Nickname</div>
-                        <div class="view">View Portfolio →</div>
+
+
+                <!-- =============================
+                     STUDENT 03
+                ============================== -->
+
+                <a
+                    class="student-card"
+                    href="03_Nickname_Portfolio/"
+                >
+
+                    <div class="preview">
+
+                        <iframe
+                            src="03_Nickname_Portfolio/"
+                            title="Student 03 Portfolio"
+                        ></iframe>
+
                     </div>
+
+                    <div class="card-info">
+
+                        <div class="number">
+                            03
+                        </div>
+
+                        <div class="name">
+                            Nickname
+                        </div>
+
+                        <div class="view">
+                            View Portfolio →
+                        </div>
+
+                    </div>
+
                 </a>
 
-                <a class="student-card" href="04_Nickname_Portfolio/">
-                    <span class="number">04</span>
-                    <div>
-                        <div class="name">Nickname</div>
-                        <div class="view">View Portfolio →</div>
+
+
+                <!-- =============================
+                     STUDENT 04
+                ============================== -->
+
+                <a
+                    class="student-card"
+                    href="04_Nickname_Portfolio/"
+                >
+
+                    <div class="preview">
+
+                        <iframe
+                            src="04_Nickname_Portfolio/"
+                            title="Student 04 Portfolio"
+                        ></iframe>
+
                     </div>
+
+                    <div class="card-info">
+
+                        <div class="number">
+                            04
+                        </div>
+
+                        <div class="name">
+                            Nickname
+                        </div>
+
+                        <div class="view">
+                            View Portfolio →
+                        </div>
+
+                    </div>
+
                 </a>
 
-                <a class="student-card" href="05_Nickname_Portfolio/">
-                    <span class="number">05</span>
-                    <div>
-                        <div class="name">Nickname</div>
-                        <div class="view">View Portfolio →</div>
+
+
+                <!-- =============================
+                     STUDENT 05
+                ============================== -->
+
+                <a
+                    class="student-card"
+                    href="05_Nickname_Portfolio/"
+                >
+
+                    <div class="preview">
+
+                        <iframe
+                            src="05_Nickname_Portfolio/"
+                            title="Student 05 Portfolio"
+                        ></iframe>
+
                     </div>
+
+                    <div class="card-info">
+
+                        <div class="number">
+                            05
+                        </div>
+
+                        <div class="name">
+                            Nickname
+                        </div>
+
+                        <div class="view">
+                            View Portfolio →
+                        </div>
+
+                    </div>
+
                 </a>
 
-                <a class="student-card" href="06_Nickname_Portfolio/">
-                    <span class="number">06</span>
-                    <div>
-                        <div class="name">Nickname</div>
-                        <div class="view">View Portfolio →</div>
+
+
+                <!-- =============================
+                     STUDENT 06
+                ============================== -->
+
+                <a
+                    class="student-card"
+                    href="06_Nickname_Portfolio/"
+                >
+
+                    <div class="preview">
+
+                        <iframe
+                            src="06_Nickname_Portfolio/"
+                            title="Student 06 Portfolio"
+                        ></iframe>
+
                     </div>
+
+                    <div class="card-info">
+
+                        <div class="number">
+                            06
+                        </div>
+
+                        <div class="name">
+                            Nickname
+                        </div>
+
+                        <div class="view">
+                            View Portfolio →
+                        </div>
+
+                    </div>
+
                 </a>
 
-                <a class="student-card" href="07_Nickname_Portfolio/">
-                    <span class="number">07</span>
-                    <div>
-                        <div class="name">Nickname</div>
-                        <div class="view">View Portfolio →</div>
+
+
+                <!-- =============================
+                     STUDENT 07
+                ============================== -->
+
+                <a
+                    class="student-card"
+                    href="07_Nickname_Portfolio/"
+                >
+
+                    <div class="preview">
+
+                        <iframe
+                            src="07_Nickname_Portfolio/"
+                            title="Student 07 Portfolio"
+                        ></iframe>
+
                     </div>
+
+                    <div class="card-info">
+
+                        <div class="number">
+                            07
+                        </div>
+
+                        <div class="name">
+                            Nickname
+                        </div>
+
+                        <div class="view">
+                            View Portfolio →
+                        </div>
+
+                    </div>
+
                 </a>
 
-                <a class="student-card" href="08_Nickname_Portfolio/">
-                    <span class="number">08</span>
-                    <div>
-                        <div class="name">Nickname</div>
-                        <div class="view">View Portfolio →</div>
+
+
+                <!-- =============================
+                     STUDENT 08
+                ============================== -->
+
+                <a
+                    class="student-card"
+                    href="08_Nickname_Portfolio/"
+                >
+
+                    <div class="preview">
+
+                        <iframe
+                            src="08_Nickname_Portfolio/"
+                            title="Student 08 Portfolio"
+                        ></iframe>
+
                     </div>
+
+                    <div class="card-info">
+
+                        <div class="number">
+                            08
+                        </div>
+
+                        <div class="name">
+                            Nickname
+                        </div>
+
+                        <div class="view">
+                            View Portfolio →
+                        </div>
+
+                    </div>
+
                 </a>
 
-                <a class="student-card" href="09_Nickname_Portfolio/">
-                    <span class="number">09</span>
-                    <div>
-                        <div class="name">Nickname</div>
-                        <div class="view">View Portfolio →</div>
+
+
+                <!-- =============================
+                     STUDENT 09
+                ============================== -->
+
+                <a
+                    class="student-card"
+                    href="09_Nickname_Portfolio/"
+                >
+
+                    <div class="preview">
+
+                        <iframe
+                            src="09_Nickname_Portfolio/"
+                            title="Student 09 Portfolio"
+                        ></iframe>
+
                     </div>
+
+                    <div class="card-info">
+
+                        <div class="number">
+                            09
+                        </div>
+
+                        <div class="name">
+                            Nickname
+                        </div>
+
+                        <div class="view">
+                            View Portfolio →
+                        </div>
+
+                    </div>
+
                 </a>
 
-                <a class="student-card" href="10_Nickname_Portfolio/">
-                    <span class="number">10</span>
-                    <div>
-                        <div class="name">Nickname</div>
-                        <div class="view">View Portfolio →</div>
+
+
+                <!-- =============================
+                     STUDENT 10
+                ============================== -->
+
+                <a
+                    class="student-card"
+                    href="10_Nickname_Portfolio/"
+                >
+
+                    <div class="preview">
+
+                        <iframe
+                            src="10_Nickname_Portfolio/"
+                            title="Student 10 Portfolio"
+                        ></iframe>
+
                     </div>
+
+                    <div class="card-info">
+
+                        <div class="number">
+                            10
+                        </div>
+
+                        <div class="name">
+                            Nickname
+                        </div>
+
+                        <div class="view">
+                            View Portfolio →
+                        </div>
+
+                    </div>
+
                 </a>
+
+
+
+                <!-- =============================
+                     STUDENT 11
+                ============================== -->
 
                 <a class="student-card" href="11_Nickname_Portfolio/">
-                    <span class="number">11</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="11_Nickname_Portfolio/"
+                            title="Student 11 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">11</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 12 -->
 
                 <a class="student-card" href="12_Nickname_Portfolio/">
-                    <span class="number">12</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="12_Nickname_Portfolio/"
+                            title="Student 12 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">12</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 13 -->
 
                 <a class="student-card" href="13_Nickname_Portfolio/">
-                    <span class="number">13</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="13_Nickname_Portfolio/"
+                            title="Student 13 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">13</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 14 -->
 
                 <a class="student-card" href="14_Nickname_Portfolio/">
-                    <span class="number">14</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="14_Nickname_Portfolio/"
+                            title="Student 14 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">14</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 15 -->
 
                 <a class="student-card" href="15_Nickname_Portfolio/">
-                    <span class="number">15</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="15_Nickname_Portfolio/"
+                            title="Student 15 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">15</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 16 -->
 
                 <a class="student-card" href="16_Nickname_Portfolio/">
-                    <span class="number">16</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="16_Nickname_Portfolio/"
+                            title="Student 16 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">16</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 17 -->
 
                 <a class="student-card" href="17_Nickname_Portfolio/">
-                    <span class="number">17</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="17_Nickname_Portfolio/"
+                            title="Student 17 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">17</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 18 -->
 
                 <a class="student-card" href="18_Nickname_Portfolio/">
-                    <span class="number">18</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="18_Nickname_Portfolio/"
+                            title="Student 18 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">18</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 19 -->
 
                 <a class="student-card" href="19_Nickname_Portfolio/">
-                    <span class="number">19</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="19_Nickname_Portfolio/"
+                            title="Student 19 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">19</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 20 -->
 
                 <a class="student-card" href="20_Nickname_Portfolio/">
-                    <span class="number">20</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="20_Nickname_Portfolio/"
+                            title="Student 20 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">20</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 21 -->
 
                 <a class="student-card" href="21_Nickname_Portfolio/">
-                    <span class="number">21</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="21_Nickname_Portfolio/"
+                            title="Student 21 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">21</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 22 -->
 
                 <a class="student-card" href="22_Nickname_Portfolio/">
-                    <span class="number">22</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="22_Nickname_Portfolio/"
+                            title="Student 22 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">22</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 23 -->
 
                 <a class="student-card" href="23_Nickname_Portfolio/">
-                    <span class="number">23</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="23_Nickname_Portfolio/"
+                            title="Student 23 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">23</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 24 -->
 
                 <a class="student-card" href="24_Nickname_Portfolio/">
-                    <span class="number">24</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="24_Nickname_Portfolio/"
+                            title="Student 24 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">24</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 25 -->
 
                 <a class="student-card" href="25_Nickname_Portfolio/">
-                    <span class="number">25</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="25_Nickname_Portfolio/"
+                            title="Student 25 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">25</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 26 -->
 
                 <a class="student-card" href="26_Nickname_Portfolio/">
-                    <span class="number">26</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="26_Nickname_Portfolio/"
+                            title="Student 26 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">26</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 27 -->
 
                 <a class="student-card" href="27_Nickname_Portfolio/">
-                    <span class="number">27</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="27_Nickname_Portfolio/"
+                            title="Student 27 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">27</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 28 -->
 
                 <a class="student-card" href="28_Nickname_Portfolio/">
-                    <span class="number">28</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="28_Nickname_Portfolio/"
+                            title="Student 28 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">28</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 29 -->
 
                 <a class="student-card" href="29_Nickname_Portfolio/">
-                    <span class="number">29</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="29_Nickname_Portfolio/"
+                            title="Student 29 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">29</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 30 -->
 
                 <a class="student-card" href="30_Nickname_Portfolio/">
-                    <span class="number">30</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="30_Nickname_Portfolio/"
+                            title="Student 30 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">30</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 31 -->
 
                 <a class="student-card" href="31_Nickname_Portfolio/">
-                    <span class="number">31</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="31_Nickname_Portfolio/"
+                            title="Student 31 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">31</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 32 -->
 
                 <a class="student-card" href="32_Nickname_Portfolio/">
-                    <span class="number">32</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="32_Nickname_Portfolio/"
+                            title="Student 32 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">32</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 33 -->
 
                 <a class="student-card" href="33_Nickname_Portfolio/">
-                    <span class="number">33</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="33_Nickname_Portfolio/"
+                            title="Student 33 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">33</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 34 -->
 
                 <a class="student-card" href="34_Nickname_Portfolio/">
-                    <span class="number">34</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="34_Nickname_Portfolio/"
+                            title="Student 34 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">34</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 35 -->
 
                 <a class="student-card" href="35_Nickname_Portfolio/">
-                    <span class="number">35</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="35_Nickname_Portfolio/"
+                            title="Student 35 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">35</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
+
+
+
+                <!-- STUDENT 36 -->
 
                 <a class="student-card" href="36_Nickname_Portfolio/">
-                    <span class="number">36</span>
-                    <div>
+
+                    <div class="preview">
+                        <iframe
+                            src="36_Nickname_Portfolio/"
+                            title="Student 36 Portfolio">
+                        </iframe>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="number">36</div>
                         <div class="name">Nickname</div>
                         <div class="view">View Portfolio →</div>
                     </div>
+
                 </a>
 
+
             </div>
+
         </section>
 
     </main>
 
 
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
     <footer>
-        <span>M3/14 Website Portfolio Project</span>
-        <span>Student Showcase • 2026</span>
+
+        <span>
+            M3/14 Website Portfolio Project
+        </span>
+
+        <span>
+            Student Showcase • 2026
+        </span>
+
     </footer>
+
 
 </body>
 </html>

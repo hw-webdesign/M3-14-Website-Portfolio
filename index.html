@@ -1,0 +1,485 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>M3/14 — Website Portfolio Project</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #111;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        header {
+            padding: 70px 8% 50px;
+            border-bottom: 1px solid #333;
+        }
+
+        .course {
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: #aaa;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 90px);
+            line-height: 0.95;
+            font-weight: 800;
+            letter-spacing: -4px;
+        }
+
+        .description {
+            max-width: 650px;
+            margin-top: 30px;
+            color: #aaa;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* STUDENT SECTION */
+        main {
+            padding: 60px 8% 100px;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+        }
+
+        .count {
+            color: #777;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        /* GRID */
+        .student-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .student-card {
+            text-decoration: none;
+            color: white;
+            border: 1px solid #333;
+            padding: 25px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.25s ease;
+            background: #161616;
+        }
+
+        .student-card:hover {
+            background: #fff;
+            color: #111;
+            transform: translateY(-5px);
+        }
+
+        .number {
+            font-size: 13px;
+            color: #777;
+            letter-spacing: 2px;
+        }
+
+        .student-card:hover .number {
+            color: #555;
+        }
+
+        .name {
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        .view {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 15px;
+            color: #888;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid #333;
+            padding: 30px 8%;
+            color: #666;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding-top: 45px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .student-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .student-card {
+                min-height: 130px;
+                padding: 18px;
+            }
+
+            .name {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="course">M3/14</div>
+
+    <h1>Website<br>Portfolio<br>Project.</h1>
+
+    <p class="description">
+        A collection of student website portfolio projects.
+        Explore each student's work, ideas, design process,
+        and finished website.
+    </p>
+</header>
+
+
+<main>
+
+    <div class="section-title">
+        <h2>Student Portfolios</h2>
+        <div class="count">01 — 36</div>
+    </div>
+
+
+    <div class="student-grid">
+
+        <a class="student-card" href="01_Nickname_Portfolio/">
+            <span class="number">01</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="02_Nickname_Portfolio/">
+            <span class="number">02</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="03_Nickname_Portfolio/">
+            <span class="number">03</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="04_Nickname_Portfolio/">
+            <span class="number">04</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="05_Nickname_Portfolio/">
+            <span class="number">05</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="06_Nickname_Portfolio/">
+            <span class="number">06</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="07_Nickname_Portfolio/">
+            <span class="number">07</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="08_Nickname_Portfolio/">
+            <span class="number">08</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="09_Nickname_Portfolio/">
+            <span class="number">09</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="10_Nickname_Portfolio/">
+            <span class="number">10</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="11_Nickname_Portfolio/">
+            <span class="number">11</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="12_Nickname_Portfolio/">
+            <span class="number">12</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="13_Nickname_Portfolio/">
+            <span class="number">13</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="14_Nickname_Portfolio/">
+            <span class="number">14</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="15_Nickname_Portfolio/">
+            <span class="number">15</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="16_Nickname_Portfolio/">
+            <span class="number">16</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="17_Nickname_Portfolio/">
+            <span class="number">17</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="18_Nickname_Portfolio/">
+            <span class="number">18</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="19_Nickname_Portfolio/">
+            <span class="number">19</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="20_Nickname_Portfolio/">
+            <span class="number">20</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="21_Nickname_Portfolio/">
+            <span class="number">21</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="22_Nickname_Portfolio/">
+            <span class="number">22</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="23_Nickname_Portfolio/">
+            <span class="number">23</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="24_Nickname_Portfolio/">
+            <span class="number">24</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="25_Nickname_Portfolio/">
+            <span class="number">25</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="26_Nickname_Portfolio/">
+            <span class="number">26</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="27_Nickname_Portfolio/">
+            <span class="number">27</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="28_Nickname_Portfolio/">
+            <span class="number">28</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="29_Nickname_Portfolio/">
+            <span class="number">29</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="30_Nickname_Portfolio/">
+            <span class="number">30</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="31_Nickname_Portfolio/">
+            <span class="number">31</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="32_Nickname_Portfolio/">
+            <span class="number">32</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="33_Nickname_Portfolio/">
+            <span class="number">33</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="34_Nickname_Portfolio/">
+            <span class="number">34</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="35_Nickname_Portfolio/">
+            <span class="number">35</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+        <a class="student-card" href="36_Nickname_Portfolio/">
+            <span class="number">36</span>
+            <div>
+                <div class="name">Nickname</div>
+                <div class="view">View Portfolio →</div>
+            </div>
+        </a>
+
+    </div>
+</main>
+
+
+<footer>
+    <span>M3/14 Website Portfolio Project</span>
+    <span>Student Showcase • 2026</span>
+</footer>
+
+</body>
+</html>
+```
